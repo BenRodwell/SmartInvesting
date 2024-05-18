@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Investing</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- Title and Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Smart Investing</a>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Saved</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Investors</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" id="stockForm">
+          <input type="search" id="stockFinder" placeholder="Stock Ticker">
+          <input type="search" id="stockCountry" placeholder="Exchange">
+          <button onclick="fetchData()">Search</button><br>
+        </form>
+      </div>
+    </nav>
+    <!-- Display of Company Logo, Company Name, Sticker Price & Stock Price -->
+    <div class="container text-left">
+      <div>
+        <h1 id="stockName"></h1>
+        <h4 id="stockSymbol"></h4>
+        <h4 id="stockCountry"></h4>
+        <h7><b>Exchange:</b></h7><br><h7 id="stockExchange"></h7><br>
+        <h7><b>Industry:</b></h7><br><h7 id="stockIndustry"></h7><br>
+        <h7><b>Sector:</b></h7><br><h7 id="stockSector"></h7><br>
+        <h7 id="stockDescription"></h7>
+        <br>
+        <br>
+      </div>
+    </div>
+
+   
+
+    <!-- ROIC -->
+    <div>
+      <h4><strong>ROIC</strong></h4>
+    </div>
+   
+    <!-- ROIC 10 Year -->
+    <div class="row pt-3 justify-content-center">
+      <div class="col">
+        <table class="table table-bordered text-center" id="colour">
+          <tbody id="colour">
+            <tr>
+              <th>10 - Year</th>
+            </tr>
+            <tr>
+              <td id="roic_10_year"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+     <!-- ROIC 9 Year -->
+      <div class="col">
+        <table class="table table-bordered text-center">
+          <tbody>
+            <tr>
+              <th>9 - Year</th>
+            </tr>
+            <tr>
+              <td id="roic_9_year"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+     
+    <!-- ROIC 8 Year -->
+    <div class="col">
+        <table class="table table-bordered text-center">
+          <tbody>
+            <tr>
+              <th>8 - Year</th>
+            </tr>
+            <tr>
+              <td id="roic_8_year"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    <!-- ROIC 7 Year -->
+    <div class="col">
+        <table class="table table-bordered text-center">
+          <tbody>
+            <tr>
+              <th>7 - Year</th>
+            </tr>
+            <tr>
+              <td id="roic_7_year"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ROIC 6 Year -->
+      <div class="col">
+        <table class="table table-bordered text-center">
+          <tbody>
+            <tr>
+              <th>6 - Year</th>
+            </tr>
+            <tr>
+              <td id="roic_6_year"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ROIC 5 Year -->
+      <div class="col">
+        <table class="table table-bordered text-center">
+          <tbody>
+            <tr>
+              <th>5 - Year</th>
+            </tr>
+            <tr>
+              <td id="roic_5_year"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ROIC 4 Year -->
+      <div class="col">
+        <table class="table table-bordered text-center">
+          <tbody>
+            <tr>
+              <th>4 - Year</th>
+            </tr>
+            <tr>
+              <td id="roic_4_year"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ROIC 3 Year -->
+      <div class="col">
+        <table class="table table-bordered text-center">
+          <tbody>
+            <tr>
+              <th>3 - Year</th>
+            </tr>
+            <tr>
+              <td id="roic_3_year"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ROIC 2 Year -->
+      <div class="col">
+        <table class="table table-bordered text-center">
+          <tbody>
+            <tr>
+              <th>2 - Year</th>
+            </tr>
+            <tr>
+              <td id="roic_2_year"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ROIC 1 Year -->
+      <div class="col">
+        <table class="table table-bordered text-center">
+          <tbody>
+            <tr>
+              <th>1 - Year</th>
+            </tr>
+            <tr>
+              <td id="roic_1_year"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
